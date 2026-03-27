@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozy Pink Business</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe4e1, #fff0f5);
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ff69b4;
+    }
+
+    /* Floating Hearts */
+    .heart {
+      position: absolute;
+      color: #ff69b4;
+      font-size: 20px;
+      animation: float 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-10vh) translateX(50px) rotate(360deg); opacity: 0; }
+    }
+
+    /* Sparkles */
+    .sparkle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #ff69b4;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0.8;
+      animation: sparkle 0.7s forwards;
+    }
+
+    @keyframes sparkle {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0); opacity: 0; }
+    }
+
+    header {
+      background-color: #ffc0cb;
+      padding: 20px 40px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-family: 'Sacramento', cursive;
+      font-size: 50px;
+      margin: 0;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(255,105,180,0.7);
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff1493;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      position: relative;
+    }
+
+    .about, .contact {
+      background-color: #ffe4e1;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+      padding: 40px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .about:hover, .contact:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #ff1493;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: #fff0f5;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05) translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ffb6c1;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffc0cb;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 600px){
+      header h1 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Hearts -->
+  <div class="heart" style="left:10%;">❤️</div>
+  <div class="heart" style="left:25%; font-size:25px;">💖</div>
+  <div class="heart" style="left:50%; font-size:18px;">💕</div>
+  <div class="heart" style="left:70%; font-size:22px;">💗</div>
+  <div class="heart" style="left:85%; font-size:20px;">💞</div>
+
+  <!-- Header -->
+  <header>
+    <h1>Cozy Pink Business</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to Our Cozy Pink World</h2>
+    <p>Where every product is made with love and care. Explore our collection and find something special just for you.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are a small business passionate about creating cozy and aesthetic products that bring joy and comfort into your life.</p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200.png?text=Product+1" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Cozy and cute description of your product.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200.png?text=Product+2" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>Cozy and cute description of your product.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200.png?text=Product+3" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>Cozy and cute description of your product.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Cozy Pink Business. All rights reserved.
+  </footer>
+
+  <!-- Sparkle Script -->
+  <script>
+    document.addEventListener('mousemove', function(e) {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = e.pageX + 'px';
+      sparkle.style.top = e.pageY + 'px';
+      sparkle.style.width = sparkle.style.height = Math.random() * 8 + 4 + 'px';
+      document.body.appendChild(sparkle);
+      setTimeout(() => {
+        sparkle.remove();
+      }, 700);
+    });
+  </script>
+</body>
+</html>
